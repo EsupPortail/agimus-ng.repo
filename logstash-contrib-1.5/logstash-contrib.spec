@@ -48,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Fri Sep 4 2015 antoine.wallon@univ-lille1.fr 1.5-2
+* Fri Sep 4 2015 ines.wallon@univ-lille1.fr 1.5-2
 - Initial version
 
