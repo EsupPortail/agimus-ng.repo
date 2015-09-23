@@ -1,5 +1,5 @@
 %global K_home %{_datadir}/%{name}
-
+%undefine _missing_build_ids_terminate_build
 Name:		kibana
 Version:	4.0.1
 Release:	1.ag%{?dist}
@@ -22,7 +22,7 @@ AutoReqProv: no
 Kibana is an open source data visualization platform that allows you to interact with your data through stunning, powerful graphics that can be combined into custom dashboards that help you share insights from your data far and wide. 
 
 %prep
-%setup -q
+%setup -q -n kibana-4.0.1-linux-x64
 
 
 %build
@@ -33,24 +33,26 @@ install -d %{buildroot}%{K_home}/bin
 install -d %{buildroot}%{K_home}/node
 install -d %{buildroot}%{K_home}/plugins
 install -d %{buildroot}%{K_home}/src
-
-
+install -d %{buildroot}%{_sysconfdir}/init.d
+install -d %{buildroot}%{_defaultdocdir}/%{name}
 install -d %{buildroot}%{_sysconfdir}/%{name}
 
 cp -a bin/kibana  %{buildroot}%{K_home}/bin
 cp -ra node/*  %{buildroot}%{K_home}/node
 cp -ra plugins/*  %{buildroot}%{K_home}/plugins
 cp -ra src/*  %{buildroot}%{K_home}/src
-
-#doc
-cp -a  *.txt  %{buildroot}%{_defaultdocdir}/%{name}
+#Doc
+cp -a  node/ChangeLog  %{buildroot}%{_defaultdocdir}/%{name}
+cp -a  node/LICENSE  %{buildroot}%{_defaultdocdir}/%{name}
+cp -a  node/README.md  %{buildroot}%{_defaultdocdir}/%{name}
+cp -a  node/share/man/man1/node.1  %{buildroot}%{_defaultdocdir}/%{name}
 
 #config
 cp -a config/*  %{buildroot}%{_sysconfdir}/%{name}
 
 #init script
 
-install -m 755 %{SOURCE1} %{buildroot}%{_sysconfdir}/init.d/%{name}
+install -m 755 %{SOURCE1} %{buildroot}%{_sysconfdir}/init.d/%{name}.initd
 
 
 %pre
@@ -79,11 +81,13 @@ fi
 
 
 %files
-%{K_home}/node/kibana
-
-%dir %{K_home}/node
-%dir %{K_home}/plugins
-%dir %{K_home}/src
+%dir %{K_home}
+%{_sysconfdir}/init.d/%{name}.initd
+%{K_home}/node/*
+%{K_home}/bin/*
+%{K_home}/plugins/*
+%{K_home}/src/*
+%{_defaultdocdir}/%{name}
 %dir %{_sysconfdir}/%{name}
 %attr(4755, %{name}, %{name}) %{_sysconfdir}/%{name}/%{name}.yml
 
@@ -92,5 +96,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Mon Jun 22 2015 antoine.wallon@univ-lille1.fr 4.0.1-1
+* Mon Jun 22 2015 ines.wallon@univ-lille1.fr 4.0.1-1
 - Initial version
