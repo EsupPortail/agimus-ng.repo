@@ -1,0 +1,30 @@
+##############             schema eduPerson             ##############
+#             Extrait de http://www.educause.edu/eduperson/
+#                      C. Claveleira - CRU
+
+
+
+######## Attributs :
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.60 NAME 'mailacceptinggeneralid'
+        DESC 'postfix mailacceptinggeneralid'
+        EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256} )
+
+
+#EQUALITY caseIgnoreIA5Match
+#    	SUBSTR caseIgnoreIA5SubstringsMatch
+#        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.61 NAME 'maildrop'
+        DESC 'postfix maildrop'
+        EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256} )
+  
+
+objectclass ( 1.3.6.1.4.1.7135.1.2.2.60 NAME 'postfixPerson' SUP top AUXILIARY
+        DESC 'classe postfix'
+        MUST ( )
+        MAY ( mailacceptinggeneralid $ maildrop  ) )

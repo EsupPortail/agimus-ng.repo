@@ -1,0 +1,68 @@
+##############             schema eduPerson             ##############
+#             Extrait de http://www.educause.edu/eduperson/
+#                      C. Claveleira - CRU
+
+
+
+######## Attributs :
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.1 
+          NAME 'eduPersonAffiliation' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+        EQUALITY caseIgnoreMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' ) 
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.7 
+          NAME 'eduPersonEntitlement' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+        EQUALITY caseIgnoreMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' ) 
+
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.2 
+          NAME 'eduPersonNickname' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+        EQUALITY caseIgnoreMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' ) 
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.3 
+          NAME 'eduPersonOrgDN' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+          EQUALITY distinguishedNameMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.12' SINGLE-VALUE ) 
+
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.4 
+          NAME 'eduPersonOrgUnitDN' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+          EQUALITY distinguishedNameMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.12' ) 
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.5 
+          NAME 'eduPersonPrimaryAffiliation' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+        EQUALITY caseIgnoreMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' SINGLE-VALUE ) 
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.8 
+          NAME 'eduPersonPrimaryOrgUnitDN' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+          EQUALITY distinguishedNameMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.12' SINGLE-VALUE ) 
+
+attributetype ( 1.3.6.1.4.1.5923.1.1.1.6 
+          NAME 'eduPersonPrincipalName' 
+          DESC 'eduPerson per Internet2 and EDUCAUSE' 
+        EQUALITY caseIgnoreMatch 
+          SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' SINGLE-VALUE ) 
+
+
+#### Classes :
+
+objectclass ( 1.3.6.1.4.1.5923.1.1.2 
+        NAME 'eduPerson' 
+        AUXILIARY 
+        MAY ( eduPersonAffiliation $ eduPersonNickname $ 
+                    eduPersonOrgDN $ eduPersonOrgUnitDN $ 
+                    eduPersonPrimaryAffiliation $ eduPersonPrincipalName $ 
+                    eduPersonEntitlement $ eduPersonPrimaryOrgUnitDN ) )
+

@@ -1,0 +1,147 @@
+##############            schema supann                 ##############
+#                      C. Claveleira - CRU
+
+# $Id: supann.schema,v 1.14 2003/07/25 09:16:41 clavelei Exp $
+
+
+# Schema des objets specifiques des recommandations supann
+
+# Plac%Gï¿½%@ sous l'arc 1.3.6.1.4.1.7135.1.2 du CRU
+# sous-arc 1 : attributsm
+# sous-arc 2 : classes
+
+# Modifications :
+#
+# 25 juil. 03 (CC) : supannGroup* -> supannGroupe*
+# 10 juil. 03 (CC) : supannGroupeLecteur -> supannGroupeLecteurDN, supannGroupeAdministrateur -> supannGroupeAdminDN
+# 09 juil. 03 (CC) : ajout supannGroupeLecteur
+# 08 juil. 03 (CC) : exactmatch pour supannEtuId, supannEmpId, supannAliasLogin
+# 07 juil. 03 (CC) : mise en conformite avec V033
+# 05 juin  03 (CC) : ajout supannDateFin, supannParrain et classe freduPerson
+# 27 mai   03 (CC) : supannEmpActivite plus obligatoire
+# 23 mai   03 (CC) : supannOrganisme et supannCivilite monovalues, ajout supannRole
+# 16 mai   03 (CC) : supannCodeINE->supannEtuCodeINE, supannEtablissement->supannOrganisme, supannAliasLogin
+# 17 avril 03 (CC) : adaptations pour V 015
+# 10 avril 03 (CC) : support version 14 des recommandations
+# 20 fevr. 03 (CC) : mise a jour
+# 28 nov.  02 (CC) : version initiale
+
+# Attributs :
+#
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.1 NAME 'supannListeRouge'
+        DESC 'indique que l entree correspondante n est pas publique'
+        EQUALITY booleanMatch
+        SINGLE-VALUE
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 )
+
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.2 NAME 'entree dispo'
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.3 NAME 'supannOrganisme'
+        DESC 'code organisme d appartenance'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SINGLE-VALUE
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.4 NAME 'supannCivilite'
+        DESC 'civilite : M., Mme, Mlle'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SINGLE-VALUE
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.44{32} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.5 NAME 'supannAffectation'
+        DESC 'affectation'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.6 NAME 'entree dispo'
+
+#attributetype ( 1.3.6.1.4.1.7135.1.2.1.7 NAME 'entree dispo'
+
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.8 NAME 'entree dispo'
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.9 NAME 'supannCodeINE'
+        DESC 'code INE'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.44{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.10 NAME 'supannEtuId'
+        DESC 'identifiant scolarite'
+        EQUALITY caseExactMatch
+        SUBSTR caseExactSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.11 NAME 'supannEmpId'
+        DESC 'identifiant personnel'
+        EQUALITY caseExactMatch
+        SUBSTR caseExactSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.12  NAME 'supannAutreTelephone' 
+        SUP telephoneNumber
+        DESC 'numeros de telephone secondaires' )
+
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.13 NAME 'entree dispo'
+
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.14 NAME 'entree dispo'
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.15 NAME 'entree dispo'
+
+#-attributetype ( 1.3.6.1.4.1.7135.1.2.1.16 NAME 'entree dispo'
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.17  NAME 'supannParrainDN' 
+        SUP distinguishedName
+        DESC 'dn du responsable de cette entree' )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.18 NAME 'supannGroupeDateFin'
+        DESC 'indique la date de fin de validite de l entree correspondante'
+        EQUALITY generalizedTimeMatch
+        ORDERING generalizedTimeOrderingMatch
+        SINGLE-VALUE
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.24 )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.19  NAME 'supannGroupeAdminDN' 
+        SUP distinguishedName
+        DESC 'dn des administrateurs du groupe concerne' )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.20 NAME 'supannAliasLogin'
+        DESC 'login personalise'
+        EQUALITY caseExactMatch
+        SUBSTR caseExactSubstringsMatch
+        SINGLE-VALUE
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.21 NAME 'supannRole'
+        DESC 'role'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
+
+attributetype ( 1.3.6.1.4.1.7135.1.2.1.22  NAME 'supannGroupeLecteurDN' 
+        SUP distinguishedName
+        DESC 'dn des entites habilite a lire le contenu d un groupe' )
+
+
+
+######################## Classes d'objets :
+
+# classe complementaire specifique de supann :
+# vincent       MUST ( supannOrganisme $ supannListeRouge )
+objectclass ( 1.3.6.1.4.1.7135.1.2.2.1 NAME 'supannPerson' SUP top AUXILIARY
+        DESC 'classe d infos complementaires sur personnes supann'
+        MUST ( supannOrganisme $ supannListeRouge )
+        MAY ( supannCivilite $ supannAutreTelephone $ supannAffectation $ supannEmpId $ supannCodeINE $ supannEtuId $ supannAliasLogin $ supannRole $ supannParrainDN ) )
+
+#-objectclass ( 1.3.6.1.4.1.7135.1.2.2.2 NAME 'entree disponible'
+
+#-objectclass ( 1.3.6.1.4.1.7135.1.2.2.3 NAME 'entree disponible'
+
+#objectclass ( 1.3.6.1.4.1.7135.1.2.2.4 NAME 'entree disponible'
+
+#-objectclass ( 1.3.6.1.4.1.7135.1.2.2.5 NAME 'entree disponible'
+
+objectclass ( 1.3.6.1.4.1.7135.1.2.2.6 NAME 'supannGroupe' SUP top AUXILIARY
+        DESC 'attributs specifiques des groupes'
+        MAY ( supannGroupeDateFin  $ supannGroupeAdminDN $ supannGroupeLecteurDN ) )
+

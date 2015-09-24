@@ -1,0 +1,10 @@
+#set_lg_max 10485760
+#set the in-memory log buffer size
+#set_lg_bsize 204800
+#temporary while we're slapadding the database
+#set_flags DB_TXN_NOSYNC
+#set the (per db?) cachesize to 0GB + X bytes, split into N pieces of memory
+set_cachesize 0 250000 1
+#Maximum number of lockers possible
+#set_lk_max_lockers 1000
+

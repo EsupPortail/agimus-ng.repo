@@ -1,0 +1,1784 @@
+dn: dc=univ,dc=fr
+objectClass: top
+objectClass: domain
+dc: univ
+structuralObjectClass: domain
+
+dn: ou=People,dc=univ,dc=fr
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+creatorsName: cn=admin,dc=univ,dc=fr
+structuralObjectClass: organizationalUnit
+
+dn: uid=admin,ou=People,dc=univ,dc=fr
+sn: Administrateur
+uid: admin
+postalAddress: None
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: admin@univ.fr
+supannOrganisme: Nancy2
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: member
+supannListeRouge: FALSE
+supannAffectation: cri
+givenName: Utilisateur
+cn: Administrateur utilisateur
+displayName: Utilisateur administrateur 
+facsimileTelephoneNumber: +33 3 50 50 50 50
+description: formateur
+supannCivilite: M.
+mail: Utilisateur.Administrateur@univ.fr
+mailacceptinggeneralid: admin
+mailacceptinggeneralid: utilisateur.administrateur
+mailacceptinggeneralid: admin@univ.fr
+mailacceptinggeneralid: utilisateur.administrateur@univ.fr
+maildrop: admin
+telephoneNumber: +33 3 50 50 50 50
+userPassword: esup
+
+dn: uid=etud0,ou=People,dc=univ,dc=fr
+sn: Martin
+uid: etud0
+givenName: Gilbert
+cn: Martin Gilbert
+displayName: Gilbert Martin
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud0@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Etudiant de scd
+supannCivilite: Melle
+mail: Gilbert.Martin@univ.fr
+mailacceptinggeneralid: etud0
+mailacceptinggeneralid: Gilbert.Martin
+mailacceptinggeneralid: etud0@univ.fr
+mailacceptinggeneralid: Gilbert.Martin@univ.fr
+maildrop: etud0
+userPassword: esup
+
+dn: uid=pers0,ou=People,dc=univ,dc=fr
+sn: Moreau
+givenName: Gilbert
+cn: Moreau Gilbert
+displayName: Gilbert Moreau
+uid: pers0
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers0@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Personnel de cri
+supannCivilite: M.
+mail: Gilbert.Moreau@univ.fr
+mailacceptinggeneralid: pers0
+mailacceptinggeneralid: Gilbert.Moreau
+mailacceptinggeneralid: pers0@univ.fr
+mailacceptinggeneralid: Gilbert.Moreau@univ.fr
+maildrop: pers0
+userPassword: esup
+
+dn: uid=ens0,ou=People,dc=univ,dc=fr
+sn: Laurent
+givenName: Julie
+cn: Laurent Julie
+displayName: Julie Laurent
+uid: ens0
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens0@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Enseignant de financier
+supannCivilite: Melle
+mail: Julie.Laurent@univ.fr
+mailacceptinggeneralid: ens0
+mailacceptinggeneralid: Julie.Laurent
+mailacceptinggeneralid: ens0@univ.fr
+mailacceptinggeneralid: Julie.Laurent@univ.fr
+maildrop: ens0
+userPassword: esup
+
+dn: uid=etud1,ou=People,dc=univ,dc=fr
+sn: Richard
+uid: etud1
+givenName: Sylvain
+cn: Richard Sylvain
+displayName: Sylvain Richard
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud1@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Etudiant de financier
+supannCivilite: Melle
+mail: Sylvain.Richard@univ.fr
+mailacceptinggeneralid: etud1
+mailacceptinggeneralid: Sylvain.Richard
+mailacceptinggeneralid: etud1@univ.fr
+mailacceptinggeneralid: Sylvain.Richard@univ.fr
+maildrop: etud1
+userPassword: esup
+
+dn: uid=pers1,ou=People,dc=univ,dc=fr
+sn: Thomas
+givenName: Christine
+cn: Thomas Christine
+displayName: Christine Thomas
+uid: pers1
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers1@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Personnel de financier
+supannCivilite: M.
+mail: Christine.Thomas@univ.fr
+mailacceptinggeneralid: pers1
+mailacceptinggeneralid: Christine.Thomas
+mailacceptinggeneralid: pers1@univ.fr
+mailacceptinggeneralid: Christine.Thomas@univ.fr
+maildrop: pers1
+userPassword: esup
+
+dn: uid=ens1,ou=People,dc=univ,dc=fr
+sn: Mathieu
+givenName: Pierre
+cn: Mathieu Pierre
+displayName: Pierre Mathieu
+uid: ens1
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens1@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Enseignant de cri
+supannCivilite: M.
+mail: Pierre.Mathieu@univ.fr
+mailacceptinggeneralid: ens1
+mailacceptinggeneralid: Pierre.Mathieu
+mailacceptinggeneralid: ens1@univ.fr
+mailacceptinggeneralid: Pierre.Mathieu@univ.fr
+maildrop: ens1
+userPassword: esup
+
+dn: uid=etud2,ou=People,dc=univ,dc=fr
+sn: Martin
+uid: etud2
+givenName: Robert
+cn: Martin Robert
+displayName: Robert Martin
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud2@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de repro
+supannCivilite: Mme
+mail: Robert.Martin@univ.fr
+mailacceptinggeneralid: etud2
+mailacceptinggeneralid: Robert.Martin
+mailacceptinggeneralid: etud2@univ.fr
+mailacceptinggeneralid: Robert.Martin@univ.fr
+maildrop: etud2
+userPassword: esup
+
+dn: uid=pers2,ou=People,dc=univ,dc=fr
+sn: Bernard
+givenName: Sylvain
+cn: Bernard Sylvain
+displayName: Sylvain Bernard
+uid: pers2
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers2@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Personnel de scd
+supannCivilite: Melle
+mail: Sylvain.Bernard@univ.fr
+mailacceptinggeneralid: pers2
+mailacceptinggeneralid: Sylvain.Bernard
+mailacceptinggeneralid: pers2@univ.fr
+mailacceptinggeneralid: Sylvain.Bernard@univ.fr
+maildrop: pers2
+userPassword: esup
+
+dn: uid=ens2,ou=People,dc=univ,dc=fr
+sn: Martin
+givenName: Pierre
+cn: Martin Pierre
+displayName: Pierre Martin
+uid: ens2
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens2@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de financier
+supannCivilite: Mme
+mail: Pierre.Martin@univ.fr
+mailacceptinggeneralid: ens2
+mailacceptinggeneralid: Pierre.Martin
+mailacceptinggeneralid: ens2@univ.fr
+mailacceptinggeneralid: Pierre.Martin@univ.fr
+maildrop: ens2
+userPassword: esup
+
+dn: uid=etud3,ou=People,dc=univ,dc=fr
+sn: Laurent
+uid: etud3
+givenName: Pierre
+cn: Laurent Pierre
+displayName: Pierre Laurent
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud3@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Etudiant de financier
+supannCivilite: Melle
+mail: Pierre.Laurent@univ.fr
+mailacceptinggeneralid: etud3
+mailacceptinggeneralid: Pierre.Laurent
+mailacceptinggeneralid: etud3@univ.fr
+mailacceptinggeneralid: Pierre.Laurent@univ.fr
+maildrop: etud3
+userPassword: esup
+
+dn: uid=pers3,ou=People,dc=univ,dc=fr
+sn: Bernard
+givenName: Christine
+cn: Bernard Christine
+displayName: Christine Bernard
+uid: pers3
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers3@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Personnel de cri
+supannCivilite: Melle
+mail: Christine.Bernard@univ.fr
+mailacceptinggeneralid: pers3
+mailacceptinggeneralid: Christine.Bernard
+mailacceptinggeneralid: pers3@univ.fr
+mailacceptinggeneralid: Christine.Bernard@univ.fr
+maildrop: pers3
+userPassword: esup
+
+dn: uid=ens3,ou=People,dc=univ,dc=fr
+sn: Laurent
+givenName: Julie
+cn: Laurent Julie
+displayName: Julie Laurent
+uid: ens3
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens3@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Enseignant de financier
+supannCivilite: M.
+mail: Julie.Laurent@univ.fr
+mailacceptinggeneralid: ens3
+mailacceptinggeneralid: Julie.Laurent
+mailacceptinggeneralid: ens3@univ.fr
+mailacceptinggeneralid: Julie.Laurent@univ.fr
+maildrop: ens3
+userPassword: esup
+
+dn: uid=etud4,ou=People,dc=univ,dc=fr
+sn: Leroy
+uid: etud4
+givenName: Julie
+cn: Leroy Julie
+displayName: Julie Leroy
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud4@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Etudiant de repro
+supannCivilite: M.
+mail: Julie.Leroy@univ.fr
+mailacceptinggeneralid: etud4
+mailacceptinggeneralid: Julie.Leroy
+mailacceptinggeneralid: etud4@univ.fr
+mailacceptinggeneralid: Julie.Leroy@univ.fr
+maildrop: etud4
+userPassword: esup
+
+dn: uid=pers4,ou=People,dc=univ,dc=fr
+sn: Thomas
+givenName: Paul
+cn: Thomas Paul
+displayName: Paul Thomas
+uid: pers4
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers4@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de scd
+supannCivilite: Mme
+mail: Paul.Thomas@univ.fr
+mailacceptinggeneralid: pers4
+mailacceptinggeneralid: Paul.Thomas
+mailacceptinggeneralid: pers4@univ.fr
+mailacceptinggeneralid: Paul.Thomas@univ.fr
+maildrop: pers4
+userPassword: esup
+
+dn: uid=ens4,ou=People,dc=univ,dc=fr
+sn: Petit
+givenName: Virginie
+cn: Petit Virginie
+displayName: Virginie Petit
+uid: ens4
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens4@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Enseignant de cri
+supannCivilite: M.
+mail: Virginie.Petit@univ.fr
+mailacceptinggeneralid: ens4
+mailacceptinggeneralid: Virginie.Petit
+mailacceptinggeneralid: ens4@univ.fr
+mailacceptinggeneralid: Virginie.Petit@univ.fr
+maildrop: ens4
+userPassword: esup
+
+dn: uid=etud5,ou=People,dc=univ,dc=fr
+sn: Robert
+uid: etud5
+givenName: Pierre
+cn: Robert Pierre
+displayName: Pierre Robert
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud5@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Etudiant de financier
+supannCivilite: Mme
+mail: Pierre.Robert@univ.fr
+mailacceptinggeneralid: etud5
+mailacceptinggeneralid: Pierre.Robert
+mailacceptinggeneralid: etud5@univ.fr
+mailacceptinggeneralid: Pierre.Robert@univ.fr
+maildrop: etud5
+userPassword: esup
+
+dn: uid=pers5,ou=People,dc=univ,dc=fr
+sn: Robert
+givenName: Bernadette
+cn: Robert Bernadette
+displayName: Bernadette Robert
+uid: pers5
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers5@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Personnel de financier
+supannCivilite: Mme
+mail: Bernadette.Robert@univ.fr
+mailacceptinggeneralid: pers5
+mailacceptinggeneralid: Bernadette.Robert
+mailacceptinggeneralid: pers5@univ.fr
+mailacceptinggeneralid: Bernadette.Robert@univ.fr
+maildrop: pers5
+userPassword: esup
+
+dn: uid=ens5,ou=People,dc=univ,dc=fr
+sn: Simon
+givenName: Pierre
+cn: Simon Pierre
+displayName: Pierre Simon
+uid: ens5
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens5@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de repro
+supannCivilite: M.
+mail: Pierre.Simon@univ.fr
+mailacceptinggeneralid: ens5
+mailacceptinggeneralid: Pierre.Simon
+mailacceptinggeneralid: ens5@univ.fr
+mailacceptinggeneralid: Pierre.Simon@univ.fr
+maildrop: ens5
+userPassword: esup
+
+dn: uid=etud6,ou=People,dc=univ,dc=fr
+sn: Durand
+uid: etud6
+givenName: Gilbert
+cn: Durand Gilbert
+displayName: Gilbert Durand
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud6@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Etudiant de scd
+supannCivilite: M.
+mail: Gilbert.Durand@univ.fr
+mailacceptinggeneralid: etud6
+mailacceptinggeneralid: Gilbert.Durand
+mailacceptinggeneralid: etud6@univ.fr
+mailacceptinggeneralid: Gilbert.Durand@univ.fr
+maildrop: etud6
+userPassword: esup
+
+dn: uid=pers6,ou=People,dc=univ,dc=fr
+sn: Richard
+givenName: Paul
+cn: Richard Paul
+displayName: Paul Richard
+uid: pers6
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers6@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de financier
+supannCivilite: Mme
+mail: Paul.Richard@univ.fr
+mailacceptinggeneralid: pers6
+mailacceptinggeneralid: Paul.Richard
+mailacceptinggeneralid: pers6@univ.fr
+mailacceptinggeneralid: Paul.Richard@univ.fr
+maildrop: pers6
+userPassword: esup
+
+dn: uid=ens6,ou=People,dc=univ,dc=fr
+sn: Bernard
+givenName: Mireille
+cn: Bernard Mireille
+displayName: Mireille Bernard
+uid: ens6
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens6@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de repro
+supannCivilite: M.
+mail: Mireille.Bernard@univ.fr
+mailacceptinggeneralid: ens6
+mailacceptinggeneralid: Mireille.Bernard
+mailacceptinggeneralid: ens6@univ.fr
+mailacceptinggeneralid: Mireille.Bernard@univ.fr
+maildrop: ens6
+userPassword: esup
+
+dn: uid=etud7,ou=People,dc=univ,dc=fr
+sn: Moreau
+uid: etud7
+givenName: Mireille
+cn: Moreau Mireille
+displayName: Mireille Moreau
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud7@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Etudiant de repro
+supannCivilite: M.
+mail: Mireille.Moreau@univ.fr
+mailacceptinggeneralid: etud7
+mailacceptinggeneralid: Mireille.Moreau
+mailacceptinggeneralid: etud7@univ.fr
+mailacceptinggeneralid: Mireille.Moreau@univ.fr
+maildrop: etud7
+userPassword: esup
+
+dn: uid=pers7,ou=People,dc=univ,dc=fr
+sn: Dubois
+givenName: Gilbert
+cn: Dubois Gilbert
+displayName: Gilbert Dubois
+uid: pers7
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers7@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de repro
+supannCivilite: M.
+mail: Gilbert.Dubois@univ.fr
+mailacceptinggeneralid: pers7
+mailacceptinggeneralid: Gilbert.Dubois
+mailacceptinggeneralid: pers7@univ.fr
+mailacceptinggeneralid: Gilbert.Dubois@univ.fr
+maildrop: pers7
+userPassword: esup
+
+dn: uid=ens7,ou=People,dc=univ,dc=fr
+sn: Martin
+givenName: Julie
+cn: Martin Julie
+displayName: Julie Martin
+uid: ens7
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens7@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Enseignant de repro
+supannCivilite: Melle
+mail: Julie.Martin@univ.fr
+mailacceptinggeneralid: ens7
+mailacceptinggeneralid: Julie.Martin
+mailacceptinggeneralid: ens7@univ.fr
+mailacceptinggeneralid: Julie.Martin@univ.fr
+maildrop: ens7
+userPassword: esup
+
+dn: uid=etud8,ou=People,dc=univ,dc=fr
+sn: Marchal
+uid: etud8
+givenName: Pierre
+cn: Marchal Pierre
+displayName: Pierre Marchal
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud8@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Etudiant de scd
+supannCivilite: M.
+mail: Pierre.Marchal@univ.fr
+mailacceptinggeneralid: etud8
+mailacceptinggeneralid: Pierre.Marchal
+mailacceptinggeneralid: etud8@univ.fr
+mailacceptinggeneralid: Pierre.Marchal@univ.fr
+maildrop: etud8
+userPassword: esup
+
+dn: uid=pers8,ou=People,dc=univ,dc=fr
+sn: Leroy
+givenName: Paul
+cn: Leroy Paul
+displayName: Paul Leroy
+uid: pers8
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers8@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Personnel de cri
+supannCivilite: Melle
+mail: Paul.Leroy@univ.fr
+mailacceptinggeneralid: pers8
+mailacceptinggeneralid: Paul.Leroy
+mailacceptinggeneralid: pers8@univ.fr
+mailacceptinggeneralid: Paul.Leroy@univ.fr
+maildrop: pers8
+userPassword: esup
+
+dn: uid=ens8,ou=People,dc=univ,dc=fr
+sn: Petit
+givenName: Christine
+cn: Petit Christine
+displayName: Christine Petit
+uid: ens8
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens8@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de cri
+supannCivilite: M.
+mail: Christine.Petit@univ.fr
+mailacceptinggeneralid: ens8
+mailacceptinggeneralid: Christine.Petit
+mailacceptinggeneralid: ens8@univ.fr
+mailacceptinggeneralid: Christine.Petit@univ.fr
+maildrop: ens8
+userPassword: esup
+
+dn: uid=etud9,ou=People,dc=univ,dc=fr
+sn: Simon
+uid: etud9
+givenName: Jacques
+cn: Simon Jacques
+displayName: Jacques Simon
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud9@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de financier
+supannCivilite: Mme
+mail: Jacques.Simon@univ.fr
+mailacceptinggeneralid: etud9
+mailacceptinggeneralid: Jacques.Simon
+mailacceptinggeneralid: etud9@univ.fr
+mailacceptinggeneralid: Jacques.Simon@univ.fr
+maildrop: etud9
+userPassword: esup
+
+dn: uid=pers9,ou=People,dc=univ,dc=fr
+sn: Petit
+givenName: Bernadette
+cn: Petit Bernadette
+displayName: Bernadette Petit
+uid: pers9
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers9@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de financier
+supannCivilite: Mme
+mail: Bernadette.Petit@univ.fr
+mailacceptinggeneralid: pers9
+mailacceptinggeneralid: Bernadette.Petit
+mailacceptinggeneralid: pers9@univ.fr
+mailacceptinggeneralid: Bernadette.Petit@univ.fr
+maildrop: pers9
+userPassword: esup
+
+dn: uid=ens9,ou=People,dc=univ,dc=fr
+sn: Marchal
+givenName: Pierre
+cn: Marchal Pierre
+displayName: Pierre Marchal
+uid: ens9
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens9@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Enseignant de financier
+supannCivilite: M.
+mail: Pierre.Marchal@univ.fr
+mailacceptinggeneralid: ens9
+mailacceptinggeneralid: Pierre.Marchal
+mailacceptinggeneralid: ens9@univ.fr
+mailacceptinggeneralid: Pierre.Marchal@univ.fr
+maildrop: ens9
+userPassword: esup
+
+dn: uid=etud10,ou=People,dc=univ,dc=fr
+sn: Richard
+uid: etud10
+givenName: Pierre
+cn: Richard Pierre
+displayName: Pierre Richard
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud10@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Etudiant de repro
+supannCivilite: M.
+mail: Pierre.Richard@univ.fr
+mailacceptinggeneralid: etud10
+mailacceptinggeneralid: Pierre.Richard
+mailacceptinggeneralid: etud10@univ.fr
+mailacceptinggeneralid: Pierre.Richard@univ.fr
+maildrop: etud10
+userPassword: esup
+
+dn: uid=pers10,ou=People,dc=univ,dc=fr
+sn: Moreau
+givenName: Sylvain
+cn: Moreau Sylvain
+displayName: Sylvain Moreau
+uid: pers10
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers10@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de scd
+supannCivilite: Mme
+mail: Sylvain.Moreau@univ.fr
+mailacceptinggeneralid: pers10
+mailacceptinggeneralid: Sylvain.Moreau
+mailacceptinggeneralid: pers10@univ.fr
+mailacceptinggeneralid: Sylvain.Moreau@univ.fr
+maildrop: pers10
+userPassword: esup
+
+dn: uid=ens10,ou=People,dc=univ,dc=fr
+sn: Durand
+givenName: Bernadette
+cn: Durand Bernadette
+displayName: Bernadette Durand
+uid: ens10
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens10@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Enseignant de cri
+supannCivilite: Melle
+mail: Bernadette.Durand@univ.fr
+mailacceptinggeneralid: ens10
+mailacceptinggeneralid: Bernadette.Durand
+mailacceptinggeneralid: ens10@univ.fr
+mailacceptinggeneralid: Bernadette.Durand@univ.fr
+maildrop: ens10
+userPassword: esup
+
+dn: uid=etud11,ou=People,dc=univ,dc=fr
+sn: Thomas
+uid: etud11
+givenName: Antoine
+cn: Thomas Antoine
+displayName: Antoine Thomas
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud11@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Etudiant de financier
+supannCivilite: Mme
+mail: Antoine.Thomas@univ.fr
+mailacceptinggeneralid: etud11
+mailacceptinggeneralid: Antoine.Thomas
+mailacceptinggeneralid: etud11@univ.fr
+mailacceptinggeneralid: Antoine.Thomas@univ.fr
+maildrop: etud11
+userPassword: esup
+
+dn: uid=pers11,ou=People,dc=univ,dc=fr
+sn: Dupont
+givenName: Antoine
+cn: Dupont Antoine
+displayName: Antoine Dupont
+uid: pers11
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers11@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de cri
+supannCivilite: M.
+mail: Antoine.Dupont@univ.fr
+mailacceptinggeneralid: pers11
+mailacceptinggeneralid: Antoine.Dupont
+mailacceptinggeneralid: pers11@univ.fr
+mailacceptinggeneralid: Antoine.Dupont@univ.fr
+maildrop: pers11
+userPassword: esup
+
+dn: uid=ens11,ou=People,dc=univ,dc=fr
+sn: Simon
+givenName: Yvonne
+cn: Simon Yvonne
+displayName: Yvonne Simon
+uid: ens11
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens11@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Enseignant de scd
+supannCivilite: M.
+mail: Yvonne.Simon@univ.fr
+mailacceptinggeneralid: ens11
+mailacceptinggeneralid: Yvonne.Simon
+mailacceptinggeneralid: ens11@univ.fr
+mailacceptinggeneralid: Yvonne.Simon@univ.fr
+maildrop: ens11
+userPassword: esup
+
+dn: uid=etud12,ou=People,dc=univ,dc=fr
+sn: Simon
+uid: etud12
+givenName: Antoine
+cn: Simon Antoine
+displayName: Antoine Simon
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud12@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de financier
+supannCivilite: M.
+mail: Antoine.Simon@univ.fr
+mailacceptinggeneralid: etud12
+mailacceptinggeneralid: Antoine.Simon
+mailacceptinggeneralid: etud12@univ.fr
+mailacceptinggeneralid: Antoine.Simon@univ.fr
+maildrop: etud12
+userPassword: esup
+
+dn: uid=pers12,ou=People,dc=univ,dc=fr
+sn: Mathieu
+givenName: Antoine
+cn: Mathieu Antoine
+displayName: Antoine Mathieu
+uid: pers12
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers12@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Personnel de cri
+supannCivilite: M.
+mail: Antoine.Mathieu@univ.fr
+mailacceptinggeneralid: pers12
+mailacceptinggeneralid: Antoine.Mathieu
+mailacceptinggeneralid: pers12@univ.fr
+mailacceptinggeneralid: Antoine.Mathieu@univ.fr
+maildrop: pers12
+userPassword: esup
+
+dn: uid=ens12,ou=People,dc=univ,dc=fr
+sn: Robert
+givenName: Christine
+cn: Robert Christine
+displayName: Christine Robert
+uid: ens12
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens12@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Enseignant de repro
+supannCivilite: Melle
+mail: Christine.Robert@univ.fr
+mailacceptinggeneralid: ens12
+mailacceptinggeneralid: Christine.Robert
+mailacceptinggeneralid: ens12@univ.fr
+mailacceptinggeneralid: Christine.Robert@univ.fr
+maildrop: ens12
+userPassword: esup
+
+dn: uid=etud13,ou=People,dc=univ,dc=fr
+sn: Moreau
+uid: etud13
+givenName: Paul
+cn: Moreau Paul
+displayName: Paul Moreau
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud13@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Etudiant de cri
+supannCivilite: Melle
+mail: Paul.Moreau@univ.fr
+mailacceptinggeneralid: etud13
+mailacceptinggeneralid: Paul.Moreau
+mailacceptinggeneralid: etud13@univ.fr
+mailacceptinggeneralid: Paul.Moreau@univ.fr
+maildrop: etud13
+userPassword: esup
+
+dn: uid=pers13,ou=People,dc=univ,dc=fr
+sn: Durand
+givenName: Julien
+cn: Durand Julien
+displayName: Julien Durand
+uid: pers13
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers13@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de scd
+supannCivilite: Mme
+mail: Julien.Durand@univ.fr
+mailacceptinggeneralid: pers13
+mailacceptinggeneralid: Julien.Durand
+mailacceptinggeneralid: pers13@univ.fr
+mailacceptinggeneralid: Julien.Durand@univ.fr
+maildrop: pers13
+userPassword: esup
+
+dn: uid=ens13,ou=People,dc=univ,dc=fr
+sn: Thomas
+givenName: Gilbert
+cn: Thomas Gilbert
+displayName: Gilbert Thomas
+uid: ens13
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens13@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de repro
+supannCivilite: Mme
+mail: Gilbert.Thomas@univ.fr
+mailacceptinggeneralid: ens13
+mailacceptinggeneralid: Gilbert.Thomas
+mailacceptinggeneralid: ens13@univ.fr
+mailacceptinggeneralid: Gilbert.Thomas@univ.fr
+maildrop: ens13
+userPassword: esup
+
+dn: uid=etud14,ou=People,dc=univ,dc=fr
+sn: Durand
+uid: etud14
+givenName: Virginie
+cn: Durand Virginie
+displayName: Virginie Durand
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud14@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Etudiant de cri
+supannCivilite: Mme
+mail: Virginie.Durand@univ.fr
+mailacceptinggeneralid: etud14
+mailacceptinggeneralid: Virginie.Durand
+mailacceptinggeneralid: etud14@univ.fr
+mailacceptinggeneralid: Virginie.Durand@univ.fr
+maildrop: etud14
+userPassword: esup
+
+dn: uid=pers14,ou=People,dc=univ,dc=fr
+sn: Moreau
+givenName: Bernadette
+cn: Moreau Bernadette
+displayName: Bernadette Moreau
+uid: pers14
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers14@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Personnel de cri
+supannCivilite: Mme
+mail: Bernadette.Moreau@univ.fr
+mailacceptinggeneralid: pers14
+mailacceptinggeneralid: Bernadette.Moreau
+mailacceptinggeneralid: pers14@univ.fr
+mailacceptinggeneralid: Bernadette.Moreau@univ.fr
+maildrop: pers14
+userPassword: esup
+
+dn: uid=ens14,ou=People,dc=univ,dc=fr
+sn: Dupont
+givenName: Jacques
+cn: Dupont Jacques
+displayName: Jacques Dupont
+uid: ens14
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens14@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de scd
+supannCivilite: Mme
+mail: Jacques.Dupont@univ.fr
+mailacceptinggeneralid: ens14
+mailacceptinggeneralid: Jacques.Dupont
+mailacceptinggeneralid: ens14@univ.fr
+mailacceptinggeneralid: Jacques.Dupont@univ.fr
+maildrop: ens14
+userPassword: esup
+
+dn: uid=etud15,ou=People,dc=univ,dc=fr
+sn: Richard
+uid: etud15
+givenName: Virginie
+cn: Richard Virginie
+displayName: Virginie Richard
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud15@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de cri
+supannCivilite: Melle
+mail: Virginie.Richard@univ.fr
+mailacceptinggeneralid: etud15
+mailacceptinggeneralid: Virginie.Richard
+mailacceptinggeneralid: etud15@univ.fr
+mailacceptinggeneralid: Virginie.Richard@univ.fr
+maildrop: etud15
+userPassword: esup
+
+dn: uid=pers15,ou=People,dc=univ,dc=fr
+sn: Dubois
+givenName: Paul
+cn: Dubois Paul
+displayName: Paul Dubois
+uid: pers15
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers15@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Personnel de scd
+supannCivilite: Melle
+mail: Paul.Dubois@univ.fr
+mailacceptinggeneralid: pers15
+mailacceptinggeneralid: Paul.Dubois
+mailacceptinggeneralid: pers15@univ.fr
+mailacceptinggeneralid: Paul.Dubois@univ.fr
+maildrop: pers15
+userPassword: esup
+
+dn: uid=ens15,ou=People,dc=univ,dc=fr
+sn: Richard
+givenName: Antoine
+cn: Richard Antoine
+displayName: Antoine Richard
+uid: ens15
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens15@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Enseignant de financier
+supannCivilite: M.
+mail: Antoine.Richard@univ.fr
+mailacceptinggeneralid: ens15
+mailacceptinggeneralid: Antoine.Richard
+mailacceptinggeneralid: ens15@univ.fr
+mailacceptinggeneralid: Antoine.Richard@univ.fr
+maildrop: ens15
+userPassword: esup
+
+dn: uid=etud16,ou=People,dc=univ,dc=fr
+sn: Petit
+uid: etud16
+givenName: Mireille
+cn: Petit Mireille
+displayName: Mireille Petit
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud16@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de scd
+supannCivilite: Melle
+mail: Mireille.Petit@univ.fr
+mailacceptinggeneralid: etud16
+mailacceptinggeneralid: Mireille.Petit
+mailacceptinggeneralid: etud16@univ.fr
+mailacceptinggeneralid: Mireille.Petit@univ.fr
+maildrop: etud16
+userPassword: esup
+
+dn: uid=pers16,ou=People,dc=univ,dc=fr
+sn: Robert
+givenName: Sylvain
+cn: Robert Sylvain
+displayName: Sylvain Robert
+uid: pers16
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers16@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Personnel de scd
+supannCivilite: Melle
+mail: Sylvain.Robert@univ.fr
+mailacceptinggeneralid: pers16
+mailacceptinggeneralid: Sylvain.Robert
+mailacceptinggeneralid: pers16@univ.fr
+mailacceptinggeneralid: Sylvain.Robert@univ.fr
+maildrop: pers16
+userPassword: esup
+
+dn: uid=ens16,ou=People,dc=univ,dc=fr
+sn: Leroy
+givenName: Mireille
+cn: Leroy Mireille
+displayName: Mireille Leroy
+uid: ens16
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens16@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Enseignant de financier
+supannCivilite: Melle
+mail: Mireille.Leroy@univ.fr
+mailacceptinggeneralid: ens16
+mailacceptinggeneralid: Mireille.Leroy
+mailacceptinggeneralid: ens16@univ.fr
+mailacceptinggeneralid: Mireille.Leroy@univ.fr
+maildrop: ens16
+userPassword: esup
+
+dn: uid=etud17,ou=People,dc=univ,dc=fr
+sn: Dupont
+uid: etud17
+givenName: Antoine
+cn: Dupont Antoine
+displayName: Antoine Dupont
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud17@univ.fr
+supannOrganisme: nancy2
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de scd
+supannCivilite: M.
+mail: Antoine.Dupont@univ.fr
+mailacceptinggeneralid: etud17
+mailacceptinggeneralid: Antoine.Dupont
+mailacceptinggeneralid: etud17@univ.fr
+mailacceptinggeneralid: Antoine.Dupont@univ.fr
+maildrop: etud17
+userPassword: esup
+
+dn: uid=pers17,ou=People,dc=univ,dc=fr
+sn: Robert
+givenName: Paul
+cn: Robert Paul
+displayName: Paul Robert
+uid: pers17
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers17@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Personnel de scd
+supannCivilite: M.
+mail: Paul.Robert@univ.fr
+mailacceptinggeneralid: pers17
+mailacceptinggeneralid: Paul.Robert
+mailacceptinggeneralid: pers17@univ.fr
+mailacceptinggeneralid: Paul.Robert@univ.fr
+maildrop: pers17
+userPassword: esup
+
+dn: uid=ens17,ou=People,dc=univ,dc=fr
+sn: Robert
+givenName: Pierre
+cn: Robert Pierre
+displayName: Pierre Robert
+uid: ens17
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens17@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Enseignant de scd
+supannCivilite: Melle
+mail: Pierre.Robert@univ.fr
+mailacceptinggeneralid: ens17
+mailacceptinggeneralid: Pierre.Robert
+mailacceptinggeneralid: ens17@univ.fr
+mailacceptinggeneralid: Pierre.Robert@univ.fr
+maildrop: ens17
+userPassword: esup
+
+dn: uid=etud18,ou=People,dc=univ,dc=fr
+sn: Laurent
+uid: etud18
+givenName: Julie
+cn: Laurent Julie
+displayName: Julie Laurent
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud18@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Etudiant de repro
+supannCivilite: Melle
+mail: Julie.Laurent@univ.fr
+mailacceptinggeneralid: etud18
+mailacceptinggeneralid: Julie.Laurent
+mailacceptinggeneralid: etud18@univ.fr
+mailacceptinggeneralid: Julie.Laurent@univ.fr
+maildrop: etud18
+userPassword: esup
+
+dn: uid=pers18,ou=People,dc=univ,dc=fr
+sn: Bernard
+givenName: Julie
+cn: Bernard Julie
+displayName: Julie Bernard
+uid: pers18
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers18@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:scd
+description: Personnel de cri
+supannCivilite: Mme
+mail: Julie.Bernard@univ.fr
+mailacceptinggeneralid: pers18
+mailacceptinggeneralid: Julie.Bernard
+mailacceptinggeneralid: pers18@univ.fr
+mailacceptinggeneralid: Julie.Bernard@univ.fr
+maildrop: pers18
+userPassword: esup
+
+dn: uid=ens18,ou=People,dc=univ,dc=fr
+sn: Dupont
+givenName: Paul
+cn: Dupont Paul
+displayName: Paul Dupont
+uid: ens18
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens18@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:repro
+description: Enseignant de scd
+supannCivilite: Melle
+mail: Paul.Dupont@univ.fr
+mailacceptinggeneralid: ens18
+mailacceptinggeneralid: Paul.Dupont
+mailacceptinggeneralid: ens18@univ.fr
+mailacceptinggeneralid: Paul.Dupont@univ.fr
+maildrop: ens18
+userPassword: esup
+
+dn: uid=etud19,ou=People,dc=univ,dc=fr
+sn: Mathieu
+uid: etud19
+givenName: Julien
+cn: Mathieu Julien
+displayName: Julien Mathieu
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: etud19@univ.fr
+supannOrganisme: valenciennes
+eduPersonAffiliation: student
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: student
+supannListeRouge: FALSE
+supannAffectation:financier
+description: Etudiant de financier
+supannCivilite: Melle
+mail: Julien.Mathieu@univ.fr
+mailacceptinggeneralid: etud19
+mailacceptinggeneralid: Julien.Mathieu
+mailacceptinggeneralid: etud19@univ.fr
+mailacceptinggeneralid: Julien.Mathieu@univ.fr
+maildrop: etud19
+userPassword: esup
+
+dn: uid=pers19,ou=People,dc=univ,dc=fr
+sn: Richard
+givenName: Paul
+cn: Richard Paul
+displayName: Paul Richard
+uid: pers19
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: pers19@univ.fr
+supannOrganisme: rennes1
+eduPersonAffiliation: employee
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: employee
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Personnel de scd
+supannCivilite: M.
+mail: Paul.Richard@univ.fr
+mailacceptinggeneralid: pers19
+mailacceptinggeneralid: Paul.Richard
+mailacceptinggeneralid: pers19@univ.fr
+mailacceptinggeneralid: Paul.Richard@univ.fr
+maildrop: pers19
+userPassword: esup
+
+dn: uid=ens19,ou=People,dc=univ,dc=fr
+sn: Simon
+givenName: Christine
+cn: Simon Christine
+displayName: Christine Simon
+uid: ens19
+postalAddress: Nancy
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: eduPerson
+objectClass: supannPerson
+objectClass: postfixPerson
+eduPersonPrincipalName: ens19@univ.fr
+supannOrganisme: paris6
+eduPersonAffiliation: faculty
+eduPersonAffiliation: member
+eduPersonPrimaryAffiliation: faculty
+supannListeRouge: FALSE
+supannAffectation:cri
+description: Enseignant de repro
+supannCivilite: M.
+mail: Christine.Simon@univ.fr
+mailacceptinggeneralid: ens19
+mailacceptinggeneralid: Christine.Simon
+mailacceptinggeneralid: ens19@univ.fr
+mailacceptinggeneralid: Christine.Simon@univ.fr
+maildrop: ens19
+userPassword: esup
+
