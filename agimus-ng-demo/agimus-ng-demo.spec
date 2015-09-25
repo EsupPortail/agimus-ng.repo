@@ -2,7 +2,7 @@
 %global LDAP_SYS /etc/openldap/
 Name:		agimus-ng-demo
 Version:	1
-Release:	1.ag%{?dist}
+Release:	2.ag%{?dist}
 Summary:	Indicateur
 
 Group:		System Environment/Daemons
@@ -17,7 +17,7 @@ Source5:	supann.schema
 Source6:	init_ldap.ldif
 #BuildRequires:	
 Requires:	openldap openldap-clients openldap-servers logstash logstash-contrib elasticsearch elasticsearch-plugin-kopf kibana
-
+BuildArch:      noarch
 %description
 Indicateur
 
@@ -65,3 +65,6 @@ chown ldap:ldap -R /var/lib/ldap
 %changelog
 * Sat Jun 20 2015 ines.wallon@univ-lille1.fr 1
 - Initial version
+
+* Fri Sep 25 2015 ines.wallon@univ-lille1.fr 2
+- Change BuildArch
