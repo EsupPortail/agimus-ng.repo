@@ -2,7 +2,7 @@
 %global LDAP_SYS /etc/openldap/
 Name:		agimus-ng-demo
 Version:	1
-Release:	2.ag%{?dist}
+Release:	4.ag%{?dist}
 Summary:	Indicateur
 
 Group:		System Environment/Daemons
@@ -35,11 +35,12 @@ install -d %{buildroot}%{AG_home}/
 install -d %{buildroot}%{_sysconfdir}/openldap/
 install -d %{buildroot}%{_sysconfdir}/openldap/schema/
 install -d %{buildroot}/tmp
-cp %{SOURCE3} %{_var}/lib/ldap/DB_CONFIG
+install -d %{buildroot}%{_var}/lib/ldap/
+install -m 755 %{SOURCE2} %{buildroot}%{_var}/lib/ldap/DB_CONFIG
 install -m 755 %{SOURCE3} %{buildroot}%{_sysconfdir}/openldap/schema/postfix.schema
 install -m 755 %{SOURCE4} %{buildroot}%{_sysconfdir}/openldap/schema/eduperson.schema
 install -m 755 %{SOURCE5} %{buildroot}%{_sysconfdir}/openldap/schema/supann.schema
-cp %{SOURCE6} %{buildroot}/tmp/init_ldap.ldif
+install -m 755 %{SOURCE6} %{buildroot}/tmp/init_ldap.ldif
 
 
 %post
@@ -47,7 +48,7 @@ cp %{SOURCE6} %{buildroot}/tmp/init_ldap.ldif
 /usr/bin/systemctl start slapd
 
 # Inject ldif
-/usr/sbin/slapadd -l /tmp/%{SOURCE6} -b "dc=univ,dc=fr" -d 256
+/usr/sbin/slapadd -l /tmp/init_ldap.ldif -b "dc=univ,dc=fr" -d 256
 
 chown ldap:ldap -R /var/lib/ldap
 
@@ -58,6 +59,7 @@ chown ldap:ldap -R /var/lib/ldap
 #%dir %{buildroot}%{AG_home}/bin/
 %{_sysconfdir}/openldap/schema
 /tmp/init_ldap.ldif
+%{_var}/lib/ldap/DB_CONFIG
 #%{buildroot}%{_sysconfdir}/cron.d/%{name}.cron
 
 
