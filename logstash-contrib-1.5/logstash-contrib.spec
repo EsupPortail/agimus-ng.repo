@@ -3,7 +3,7 @@
 
 Name:		logstash-contrib
 Version:	1.5.2
-Release:	1.ag%{?dist}
+Release:	2.ag%{?dist}
 Summary:	Contrib-logstash
 
 Group:		System Environment/Daemons		
@@ -20,6 +20,9 @@ A tool for managing events and logs.
 
 %prep
 %setup -q -n vendor
+
+%postun
+rm -rf %{LS_home}/vendor
 #%setup -q -T -D -a 1
 
 #%build
