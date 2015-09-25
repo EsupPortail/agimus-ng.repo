@@ -63,8 +63,8 @@ chown ldap:ldap -R /var/lib/ldap
 
 
 %changelog
-* Sat Jun 20 2015 ines.wallon@univ-lille1.fr 1
-- Initial version
-
 * Fri Sep 25 2015 ines.wallon@univ-lille1.fr 2
 - Change BuildArch
+
+* Sat Jun 20 2015 ines.wallon@univ-lille1.fr 1
+- Initial version
