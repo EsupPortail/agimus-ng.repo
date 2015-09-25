@@ -52,7 +52,7 @@ cp -a config/*  %{buildroot}%{_sysconfdir}/%{name}
 
 #init script
 
-install -m 755 %{SOURCE1} %{buildroot}%{_sysconfdir}/init.d/%{name}.initd
+install -m 755 %{SOURCE1} %{buildroot}%{_sysconfdir}/init.d/%{name}
 
 
 %pre
@@ -82,7 +82,7 @@ fi
 
 %files
 %dir %{K_home}
-%{_sysconfdir}/init.d/%{name}.initd
+%{_sysconfdir}/init.d/%{name}
 %{K_home}/node/*
 %{K_home}/bin/*
 %{K_home}/plugins/*
