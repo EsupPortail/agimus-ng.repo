@@ -1,6 +1,0 @@
-[agimus-ng]
-name=Agimus-ng-$releasever
-baseurl=https://projets-webent.univ-lille1.fr/agimus/el$releasever/
-gpgcheck=0
-enabled=1
-
