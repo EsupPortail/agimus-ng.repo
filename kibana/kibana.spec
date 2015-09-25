@@ -2,7 +2,7 @@
 %undefine _missing_build_ids_terminate_build
 Name:		kibana
 Version:	4.0.1
-Release:	1.ag%{?dist}
+Release:	2.ag%{?dist}
 Summary:	Kibana is an open source data visualization
 
 Group:		System Environment/Daemons
