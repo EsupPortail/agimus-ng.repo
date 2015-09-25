@@ -13,7 +13,7 @@
 
 Name:           logstash
 Version:        1.5.2
-Release:        1.ag%{?dist}
+Release:        2.ag%{?dist}
 Summary:        A tool for managing events and logs
 
 Group:          System Environment/Daemons
@@ -107,11 +107,11 @@ install -d %{buildroot}%{piddir}/java_io
 # Libs (and almost anything to run daemon)
 
 install -d %{buildroot}%{LS_home}/lib
-install -d %{buildroot}%{LS_home}/vendor
+#install -d %{buildroot}%{LS_home}/vendor
 install -d %{buildroot}%{LS_home}/bin
 
 cp -ar lib/*  %{buildroot}%{LS_home}/lib/
-cp -ar vendor/*  %{buildroot}%{LS_home}/vendor/
+#cp -ar vendor/*  %{buildroot}%{LS_home}/vendor/
 cp -ar bin/*  %{buildroot}%{LS_home}/bin/
 
 # Create Home directory
@@ -148,7 +148,8 @@ rm -rf $RPM_BUILD_ROOT
 
 # Libs
 %dir %{LS_home}
-%{LS_home}/*
+%{LS_home}/lib/*
+%{LS_home}/bin/*
 
 # Config
 %{_sysconfdir}/%{name}.env
