@@ -13,7 +13,7 @@
 
 Name:           logstash
 Version:        1.5.2
-Release:        2.ag%{?dist}
+Release:        5.ag%{?dist}
 Summary:        A tool for managing events and logs
 
 Group:          System Environment/Daemons
@@ -107,12 +107,15 @@ install -d %{buildroot}%{piddir}/java_io
 # Libs (and almost anything to run daemon)
 
 install -d %{buildroot}%{LS_home}/lib
-#install -d %{buildroot}%{LS_home}/vendor
+install -d %{buildroot}%{LS_home}/vendor
 install -d %{buildroot}%{LS_home}/bin
 
 cp -ar lib/*  %{buildroot}%{LS_home}/lib/
-#cp -ar vendor/*  %{buildroot}%{LS_home}/vendor/
+cp -ar vendor/*  %{buildroot}%{LS_home}/vendor/
 cp -ar bin/*  %{buildroot}%{LS_home}/bin/
+
+cp -a  Gemfile.jruby-1.9.lock %{buildroot}%{LS_home}/
+cp -a  Gemfile %{buildroot}%{LS_home}/
 
 # Create Home directory
 #   See https://github.com/lfrancke/logstash-rpm/issues/5
@@ -150,6 +153,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{LS_home}
 %{LS_home}/lib/*
 %{LS_home}/bin/*
+%{LS_home}/vendor/*
+%{LS_home}/Gemfile.jruby-1.9.lock
+%{LS_home}/Gemfile
 
 # Config
 %{_sysconfdir}/%{name}.env
@@ -174,6 +180,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 
-* Wed Jun 17 2015 ines.wallon@univ-lille1.fr 1.5-2
-- Initial version
+* Mon Sep 28 2015 ines.wallon@univ-lille1.fr 1.5.2-4
+- add vendor
 
+* Mon Sep 28 2015 ines.wallon@univ-lille1.fr 1.5.2-3
+- Bundler::GemfileNotFound: /usr/lib64/logstash/Gemfile not found
+
+* Wed Jun 17 2015 ines.wallon@univ-lille1.fr 1.5.2-1
+- Initial version

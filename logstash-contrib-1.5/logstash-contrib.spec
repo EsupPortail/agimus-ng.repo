@@ -3,13 +3,17 @@
 
 Name:		logstash-contrib
 Version:	1.5.2
-Release:	2.ag%{?dist}
+Release:	3.ag%{?dist}
 Summary:	Contrib-logstash
 
 Group:		System Environment/Daemons		
 License:	ASL 2.0
 URL:		http://logstash.net
-Source0:	vendor.tar.gz
+Source0:	logstash-input-LDAPSearch-0.1.0.gem
+Source1:	logstash-filter-translate-0.1.9.gem
+Source2:	logstash-filter-cidr-0.1.6.gem
+Source3:	logstash-filter-elasticsearch-0.1.6.gem
+
 #BuildRequires:
 Requires:	logstash
 BuildArch:      noarch	
@@ -19,25 +23,30 @@ AutoReqProv: no
 A tool for managing events and logs.
 
 %prep
-%setup -q -n vendor
+#%setup -q
 
 %postun
-rm -rf %{LS_home}/vendor
-#%setup -q -T -D -a 1
+r#m -rf %{LS_home}/vendor
 
 #%build
 
 %post
+/usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-input-LDAPSearch-0.1.0.gem
+/usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-filter-translate-0.1.9.gem
+/usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-filter-cidr-0.1.6.gem
+/usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-filter-elasticsearch-0.1.6.gem
+
+rm -rf /tmp/%{name}/
 
 %install
-#make install DESTDIR=%{buildroot}
-#install -d  %{buildroot}%{plugindir}
-#install -d %{buildroot}%{LS_home}/vendor/logstash
-#cp -ar * %{buildroot}%{LS_home}/vendor/logstash
-install -d %{buildroot}%{LS_home}/vendor
-cp -r * %{buildroot}%{LS_home}/vendor
+install -d  %{buildroot}/tmp/%{name}
+cp -a %{SOURCE0} %{buildroot}/tmp/%{name}/
+cp -a %{SOURCE1} %{buildroot}/tmp/%{name}/
+cp -a %{SOURCE2} %{buildroot}/tmp/%{name}/
+cp -a %{SOURCE3} %{buildroot}/tmp/%{name}/
+
 %files
-%{LS_home}/vendor/*
+/tmp/%{name}/*
 #%dir %{LS_home}
 #%{LS_home}/*
 
