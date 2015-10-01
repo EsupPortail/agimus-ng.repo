@@ -1,8 +1,8 @@
-%global AG_home /opt/%{name}
+%global AG_home /opt/agimus-ng
 %global LDAP_SYS /etc/openldap/
 Name:		agimus-ng-demo
 Version:	1
-Release:	6.ag%{?dist}
+Release:	8.ag%{?dist}
 Summary:	Indicateur
 
 Group:		System Environment/Daemons
@@ -15,6 +15,16 @@ Source3:	postfix.schema
 Source4:	eduperson.schema
 Source5:	supann.schema
 Source6:	init_ldap.ldif
+Source7:	daily_batch.sh
+#Log
+Source8:	25-moodle-access.log
+Source9:	25-trace.log
+Source10:	26-moodle-access.log
+Source11:	26-trace.log
+Source12:	27-moodle-access.log
+Source13:	27-trace.log
+
+
 #BuildRequires:	
 Requires:	openldap openldap-clients openldap-servers logstash logstash-contrib elasticsearch elasticsearch-plugin-kopf kibana
 BuildArch:      noarch
@@ -31,7 +41,10 @@ Indicateur
 %install
 
 install -d %{buildroot}%{AG_home}/
-#install -d %{buildroot}%{_var}/lib/ldap/
+#install -d %{buildroot}%{AG_home}/demo
+install -d %{buildroot}%{AG_home}/demo/logs/2015/09/25
+install -d %{buildroot}%{AG_home}/demo/logs/2015/09/26
+install -d %{buildroot}%{AG_home}/demo/logs/2015/09/27
 install -d %{buildroot}%{_sysconfdir}/openldap/
 install -d %{buildroot}%{_sysconfdir}/openldap/schema/
 install -d %{buildroot}/tmp
@@ -41,9 +54,16 @@ install -m 755 %{SOURCE2} %{buildroot}%{_var}/lib/ldap/DB_CONFIG
 install -m 755 %{SOURCE3} %{buildroot}%{_sysconfdir}/openldap/schema/postfix.schema
 install -m 755 %{SOURCE4} %{buildroot}%{_sysconfdir}/openldap/schema/eduperson.schema
 install -m 755 %{SOURCE5} %{buildroot}%{_sysconfdir}/openldap/schema/supann.schema
-install -m 755 %{SOURCE6} %{buildroot}/tmp/init_ldap.ldif
+install -m 755 %{SOURCE6} %{buildroot}%{AG_home}/demo/init_ldap.ldif
+install -m 775 %{SOURCE7} %{buildroot}%{AG_home}/demo/daily_batch.sh
 
-
+#Log d'example
+cp -a %{SOURCE8} %{buildroot}%{AG_home}/demo/logs/2015/09/25/moodle-access.log
+cp -a %{SOURCE9} %{buildroot}%{AG_home}/demo/logs/2015/09/25/trace.log
+cp -a %{SOURCE10} %{buildroot}%{AG_home}/demo/logs/2015/09/26/moodle-access.log
+cp -a %{SOURCE11} %{buildroot}%{AG_home}/demo/logs/2015/09/26/trace.log
+cp -a %{SOURCE12} %{buildroot}%{AG_home}/demo/logs/2015/09/27/moodle-access.log
+cp -a %{SOURCE13} %{buildroot}%{AG_home}/demo/logs/2015/09/27/trace.log
 %post
 
 /usr/bin/systemctl stop slapd 
@@ -55,9 +75,8 @@ rm -rf /var/lib/ldap/log.*
 rm -rf /var/lib/ldap/alock
 
 # Inject ldif
-/usr/sbin/slapadd -l /tmp/init_ldap.ldif -b "dc=univ,dc=fr"
+/usr/sbin/slapadd -l /opt/agimus-ng/demo/init_ldap.ldif -b "dc=univ,dc=fr"
 
-rm -rf /tmp/init_ldap.ldif
 chown ldap:ldap -R /var/lib/ldap
 
 
@@ -67,8 +86,8 @@ chown ldap:ldap -R /var/lib/ldap
 #%dir %{buildroot}%{AG_home}/bin/
 %{_sysconfdir}/openldap/schema
 %{_sysconfdir}/openldap/slapd.conf
-/tmp/init_ldap.ldif
 %{_var}/lib/ldap/DB_CONFIG
+/opt/agimus-ng/demo/*
 #%{buildroot}%{_sysconfdir}/cron.d/%{name}.cron
 
 
