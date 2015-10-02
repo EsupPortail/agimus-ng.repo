@@ -3,7 +3,7 @@
 
 Name:		logstash-contrib
 Version:	1.5.2
-Release:	3.ag%{?dist}
+Release:	5.ag%{?dist}
 Summary:	Contrib-logstash
 
 Group:		System Environment/Daemons		
@@ -26,11 +26,13 @@ A tool for managing events and logs.
 #%setup -q
 
 %postun
-r#m -rf %{LS_home}/vendor
+#rm -rf %{LS_home}/vendor
 
 #%build
-
+%pre
+echo "Installation in progress. Please wait."
 %post
+#echo "Installation in progress. Please wait."
 /usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-input-LDAPSearch-0.1.0.gem
 /usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-filter-translate-0.1.9.gem
 /usr/lib64/logstash/bin/plugin install /tmp/%{name}/logstash-filter-cidr-0.1.6.gem
