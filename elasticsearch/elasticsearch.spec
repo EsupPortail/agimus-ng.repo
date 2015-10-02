@@ -2,7 +2,7 @@
 %global ES_home %{_datadir}/%{name}
 
 Name:		elasticsearch	
-Version:	1.4.2
+Version:	1.4.5
 Release:	4.ag%{?dist}
 Summary:        Open source, flexible, distributed search and analytics engine
 License:        ASL 2.0
