@@ -383,3 +383,4 @@ cluster.name: Agimus-ng
 # it unless you need it is recommended (it is disabled by default).
 #
 #http.jsonp.enable: true
+indices.fielddata.cache.size:  40%

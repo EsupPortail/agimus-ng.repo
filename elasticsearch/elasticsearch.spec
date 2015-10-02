@@ -3,7 +3,7 @@
 
 Name:		elasticsearch	
 Version:	1.4.2
-Release:	2.ag%{?dist}
+Release:	4.ag%{?dist}
 Summary:        Open source, flexible, distributed search and analytics engine
 License:        ASL 2.0
 URL:            http://www.elasticsearch.org/
@@ -45,7 +45,7 @@ install -d %{buildroot}/tmp/%{name}
 install -d %{buildroot}%{_defaultdocdir}/%{name}
 install -d %{buildroot}%{_sysconfdir}/init.d
 install -d %{buildroot}%{_sysconfdir}/sysconfig
-install -d %{buildroot}%{_localstatedir}/run/%{name}/
+install -d %{buildroot}%{_localstatedir}/run/%{name}
 
 
 cp -a bin/elasticsearch  %{buildroot}%{ES_home}/bin
