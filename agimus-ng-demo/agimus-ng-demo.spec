@@ -2,7 +2,7 @@
 %global LDAP_SYS /etc/openldap/
 Name:		agimus-ng-demo
 Version:	1
-Release:	11.ag%{?dist}
+Release:	13.ag%{?dist}
 Summary:	Indicateur
 
 Group:		System Environment/Daemons
@@ -35,7 +35,7 @@ Source19:       27-access-ent_UL.log
 
 
 #BuildRequires:	
-Requires:	openldap openldap-clients openldap-servers logstash logstash-contrib elasticsearch elasticsearch-plugin-kopf kibana
+Requires:	openldap openldap-clients openldap-servers logstash logstash-contrib elasticsearch elasticsearch-plugin-kopf python-elasticsearch kibana
 BuildArch:      noarch
 %description
 Indicateur
@@ -74,12 +74,12 @@ cp -a %{SOURCE11} %{buildroot}%{AG_home}/demo/logs/2015/09/26/trace.log
 cp -a %{SOURCE12} %{buildroot}%{AG_home}/demo/logs/2015/09/27/moodle-access.log
 cp -a %{SOURCE13} %{buildroot}%{AG_home}/demo/logs/2015/09/27/trace.log
 #Log UL
-cp -a %{SOURCE14} %{buildroot}%{AG_home}/demo/logs/2015/09/25/access-ent_UL.log
-cp -a %{SOURCE15} %{buildroot}%{AG_home}/demo/logs/2015/09/25/serviceStats_UL.log
-cp -a %{SOURCE16} %{buildroot}%{AG_home}/demo/logs/2015/09/26/access-ent_UL.log
-cp -a %{SOURCE17} %{buildroot}%{AG_home}/demo/logs/2015/09/26/26-serviceStats_UL.log
-cp -a %{SOURCE18} %{buildroot}%{AG_home}/demo/logs/2015/09/27/serviceStats_UL.log
-cp -a %{SOURCE19} %{buildroot}%{AG_home}/demo/logs/2015/09/27/access-ent_UL.log
+cp -a %{SOURCE14} %{buildroot}%{AG_home}/demo/logs/2015/09/25/access-ent.log
+cp -a %{SOURCE15} %{buildroot}%{AG_home}/demo/logs/2015/09/25/serviceStats.log
+cp -a %{SOURCE16} %{buildroot}%{AG_home}/demo/logs/2015/09/26/access-ent.log
+cp -a %{SOURCE17} %{buildroot}%{AG_home}/demo/logs/2015/09/26/serviceStats.log
+cp -a %{SOURCE18} %{buildroot}%{AG_home}/demo/logs/2015/09/27/serviceStats.log
+cp -a %{SOURCE19} %{buildroot}%{AG_home}/demo/logs/2015/09/27/access-ent.log
 
 
 
