@@ -2,7 +2,7 @@
 %global LDAP_SYS /etc/openldap/
 Name:		agimus-ng-demo
 Version:	1
-Release:	8.ag%{?dist}
+Release:	11.ag%{?dist}
 Summary:	Indicateur
 
 Group:		System Environment/Daemons
@@ -23,6 +23,15 @@ Source10:	26-moodle-access.log
 Source11:	26-trace.log
 Source12:	27-moodle-access.log
 Source13:	27-trace.log
+
+#Log UL
+Source14:	25-access-ent_UL.log
+Source15:	25-serviceStats_UL.log
+Source16:	26-access-ent_UL.log
+Source17:       26-serviceStats_UL.log
+Source18:       27-serviceStats_UL.log
+Source19:       27-access-ent_UL.log
+
 
 
 #BuildRequires:	
@@ -64,6 +73,16 @@ cp -a %{SOURCE10} %{buildroot}%{AG_home}/demo/logs/2015/09/26/moodle-access.log
 cp -a %{SOURCE11} %{buildroot}%{AG_home}/demo/logs/2015/09/26/trace.log
 cp -a %{SOURCE12} %{buildroot}%{AG_home}/demo/logs/2015/09/27/moodle-access.log
 cp -a %{SOURCE13} %{buildroot}%{AG_home}/demo/logs/2015/09/27/trace.log
+#Log UL
+cp -a %{SOURCE14} %{buildroot}%{AG_home}/demo/logs/2015/09/25/access-ent_UL.log
+cp -a %{SOURCE15} %{buildroot}%{AG_home}/demo/logs/2015/09/25/serviceStats_UL.log
+cp -a %{SOURCE16} %{buildroot}%{AG_home}/demo/logs/2015/09/26/access-ent_UL.log
+cp -a %{SOURCE17} %{buildroot}%{AG_home}/demo/logs/2015/09/26/26-serviceStats_UL.log
+cp -a %{SOURCE18} %{buildroot}%{AG_home}/demo/logs/2015/09/27/serviceStats_UL.log
+cp -a %{SOURCE19} %{buildroot}%{AG_home}/demo/logs/2015/09/27/access-ent_UL.log
+
+
+
 %post
 
 /usr/bin/systemctl stop slapd 
